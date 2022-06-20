@@ -1,0 +1,18 @@
+.button {
+  border: none;
+  background-color: transparent;
+
+}
+
+.button span {
+  color: #fff;
+}
+
+/* .badge {
+
+} */
+
+.icon {
+  
+  margin-right: 2rem;
+}
