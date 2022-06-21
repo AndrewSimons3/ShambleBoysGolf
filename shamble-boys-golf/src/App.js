@@ -2,7 +2,8 @@ import './App.css';
 import Header from './components/Layout/Header';
 import Main from './components/Layout/Main';
 import Cart from './components/Cart/Cart';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
+import Products from './components/Products/Products';
 
 function App() {
 	const [showCart, setShowCart] = useState(false);
@@ -16,12 +17,12 @@ function App() {
 	};
 
 	return (
-		<div className='App'>
+		<Fragment>
 			{showCart && <Cart onHideCart={hideCartHandler} />}
-
 			<Header onShowCart={showCartHandler} />
-			<Main />
-		</div>
+      <Main />
+      <Products />
+		</Fragment>
 	);
 }
 

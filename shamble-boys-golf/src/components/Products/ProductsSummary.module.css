@@ -1,0 +1,15 @@
+.summary {
+	text-align: center;
+
+
+	margin: 6rem;
+
+	color: #333333;
+	border-radius: 14px;
+	padding: 1rem;
+}
+
+.summary h2 {
+	font-size: 18px;
+	margin-top: 0;
+}

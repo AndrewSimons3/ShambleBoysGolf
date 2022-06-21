@@ -4,7 +4,7 @@ import classes from './Cart.module.css';
 
 const Cart = (props) => {
   return (
-    <Modal>
+    <Modal onHideCart={props.onHideCart}>
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>$23.99</span>

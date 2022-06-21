@@ -12,17 +12,22 @@ const ModalOverlay = (props) => {
 };
 
 const Backdrop = (props) => {
-  <div className={classes.backdrop} onClick={props.onHideCart} />;
+	return <div className={classes.backdrop} onClick={props.onHideCart} />;
 };
+
+const portalElement = document.getElementById('overlays');
 
 const Modal = (props) => {
 	return (
 		<Fragment>
 			{ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
-				document.getElementById('overlays')
+				<Backdrop onHideCart={props.onHideCart} />,
+				portalElement
 			)}
-			{ReactDOM.createPortal(<Backdrop />, document.getElementById('overlays'))}
+			{ReactDOM.createPortal(
+				<ModalOverlay>{props.children}</ModalOverlay>,
+				portalElement
+			)}
 		</Fragment>
 	);
 };

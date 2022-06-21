@@ -1,0 +1,22 @@
+.product-wrapper {
+	
+	width: 100%;
+	background: url('../../assets/cactus.jpeg') no-repeat center
+		center fixed;
+	/* position: absolute; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.product-wrapper ul {
+ list-style: none;
+
+ padding: 3rem 3rem 0 3rem;
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+flex-wrap:wrap;
+}
