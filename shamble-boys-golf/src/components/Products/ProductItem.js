@@ -14,7 +14,7 @@ const ProductItem = (props) => {
 						<span>{props.price}</span>
 					</div>
 					<div className={classes.actions}>
-						<button>Order Now</button>
+						<button className={classes.button}>Order Now</button>
 					</div>
 				</li>
 			</div>

@@ -21,6 +21,28 @@ h2 {
 .actions {
   display: flex;
   justify-content: center;
-  
- 
+}
+
+.button {
+  border: none;
+	background-color: #0c1248;
+	color: #fff;
+	padding: 6px 14px;
+	border-radius: 8px;
+	font-weight: 700;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.button:hover,
+.button:active {
+  transition: all .5s;
+  background-color: #81a8e8;
+}
+
+@media (max-width: 840px) {
+  .card {
+    width: 200px;
+    height: 150px
+  }
 }
