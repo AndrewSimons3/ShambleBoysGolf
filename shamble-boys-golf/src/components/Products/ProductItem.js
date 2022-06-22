@@ -1,8 +1,23 @@
 import React from 'react';
 import classes from './ProductItem.module.css';
 import Card from '../UI/Card';
+import { useContext } from 'react';
+import CartContext from '../store/cart-context';
+
 
 const ProductItem = (props) => {
+	const cartCtx = useContext(CartContext);
+	const price = `$${props.price.toFixed(2)}`;
+
+	const addProductToCartHandler = () => {
+		cartCtx.addProduct({
+			id: props.id,
+			name: props.name,
+			amount: 1,
+			price: price,
+		});
+	};
+
 	return (
 		<Card className={classes.card}>
 			<div className={classes['product-wrapper']}>
@@ -14,7 +29,7 @@ const ProductItem = (props) => {
 						<span>{props.price}</span>
 					</div>
 					<div className={classes.actions}>
-						<button className={classes.button}>Order Now</button>
+            <button onClick={addProductToCartHandler}>Order</button>
 					</div>
 				</li>
 			</div>

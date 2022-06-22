@@ -52,9 +52,8 @@ const productList = DUMMY_PRODUCTS.map((product) => (
 ));
 
 const AvailableProducts = () => {
-  return (
-    <div className={classes['product-wrapper']}>
-      
+	return (
+		<div className={classes['product-wrapper']}>
 			<ul>{productList}</ul>
 		</div>
 	);
