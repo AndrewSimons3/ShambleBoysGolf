@@ -8,36 +8,42 @@ const DUMMY_PRODUCTS = [
 		name: 'Golf hat',
 		description: 'Performance golf hat',
 		price: 50.99,
+		size: ['Small', 'Medium', 'Large'],
 	},
 	{
 		id: 'p2',
 		name: 'Polo',
 		description: 'Performance golf polo',
 		price: 30.99,
+		size: ['Small', 'Medium', 'Large'],
 	},
 	{
 		id: 'p3',
 		name: 'Athletic Hoodie',
 		description: 'Hoodie for on and off the golf course',
 		price: 70.99,
+		size: ['Small', 'Medium', 'Large'],
 	},
 	{
 		id: 'p4',
 		name: 'Golf shorts',
 		description: 'Performance golf shorts',
 		price: 50.99,
+		size: ['Small', 'Medium', 'Large'],
 	},
 	{
 		id: 'p5',
 		name: 'Alternate Polo',
 		description: 'Black performance polo',
 		price: 30.99,
+		size: ['Small', 'Medium', 'Large'],
 	},
 	{
 		id: 'p6',
 		name: 'Golf pants',
 		description: 'Pants for cold weather',
 		price: 70.99,
+		size: ['Small', 'Medium', 'Large'],
 	},
 ];
 
@@ -47,7 +53,8 @@ const productList = DUMMY_PRODUCTS.map((product) => (
 		key={product.id}
 		name={product.name}
 		description={product.description}
-		price={product.price}
+    price={product.price}
+    size={product.size}
 	/>
 ));
 
