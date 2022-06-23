@@ -22,20 +22,23 @@ const Cart = (props) => {
 
 	return (
 		<Modal onHideCart={props.onHideCart}>
-			{cartProducts}
 			<div className={classes.header}>
 				<h2>Cart</h2>
-				<button className={classes.exitBtn}>
+				<button className={classes.exitBtn} onClick={props.onHideCart} >
 					<CloseIcon />
 				</button>
 			</div>
-			<div className={classes.actions}>
-				<span>{totalAmount}</span>
-				<button className={classes['button--alt']} onClick={props.onHideCart}>
-					Close
-				</button>
-				{hasItems && <button className={classes.button}>Order</button>}
-			</div>
+			<hr className={classes.hr} />
+      <div className={classes.inner}>{cartProducts}</div>
+      <div className={classes.footer}>
+        <hr className={classes['hr-2']} />
+        <div className={classes.subtotal}>
+          <p>Subtotal</p>
+          <span>$25.99</span>
+        </div>
+        <p className={classes.info}>Shipping, taxes, and discounts codes calculated at checkout.</p>
+        <button className={classes.checkout}>Check Out</button>
+      </div>
 		</Modal>
 	);
 };
