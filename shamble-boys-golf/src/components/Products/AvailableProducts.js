@@ -2,6 +2,11 @@ import React from 'react';
 import classes from './AvailableProducts.module.css';
 import ProductItem from './ProductItem';
 import Flamingo from '../../assets/flamingo.webp';
+import Bloomer from '../../assets/bloomer.webp';
+import Flower from '../../assets/flower.webp';
+import Gimme from '../../assets/gimme.webp'
+import Maverick from '../../assets/Maverick.webp';
+import Friday from '../../assets/friday.webp';
 
 const DUMMY_PRODUCTS = [
 	{
@@ -9,29 +14,33 @@ const DUMMY_PRODUCTS = [
 		name: 'Bloomer',
 		description:
 			'Consumer reports show an increased number of club twirls when wearing the Bloomer.',
-		price: 69.99,
+    price: 69.99,
 		size: ['Small', 'Medium', 'Large'],
+    image: Bloomer,
 	},
 	{
 		id: 'p2',
 		name: 'Friday',
 		description: "Start the party, it's FRIDAY AT 5.",
 		price: 79.99,
-		size: ['Small', 'Medium', 'Large'],
+    size: ['Small', 'Medium', 'Large'],
+    image: Friday
 	},
 	{
 		id: 'p3',
 		name: 'Gimme',
 		description: 'No course record is safe when you pull up in the Gimme',
 		price: 79.99,
-		size: ['Small', 'Medium', 'Large'],
+    size: ['Small', 'Medium', 'Large'],
+    image: Gimme
 	},
 	{
 		id: 'p4',
 		name: 'Flower',
 		description: 'A polo that will certainly get the cart girls attention.',
 		price: 69.99,
-		size: ['Small', 'Medium', 'Large'],
+    size: ['Small', 'Medium', 'Large'],
+    image: Flower
 	},
 	{
 		id: 'p5',
@@ -46,7 +55,8 @@ const DUMMY_PRODUCTS = [
 		name: 'Maverick',
 		description: "Throw on the aviators and make birdie for Goose.",
 		price: 79.99,
-		size: ['Small', 'Medium', 'Large'],
+    size: ['Small', 'Medium', 'Large'],
+    image: Maverick
 	},
 ];
 

@@ -21,10 +21,10 @@ const ProductItem = (props) => {
 		<Card className={classes.card}>
 			<div className={classes['product-wrapper']}>
         <li className={classes['info-container']}>
-          <h2>{props.name}</h2>
-					<img src={props.image} />
+          <h3>{props.name}</h3>
+					<img src={props.image} alt="golf shirts"/>
 					<span>{props.price}</span>
-					<button className={classes.order}>Order</button>
+					<button className={classes.order} onAddToCart={addProductToCartHandler}>Order</button>
 				</li>
 			</div>
 		</Card>
