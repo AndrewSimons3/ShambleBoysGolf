@@ -20,19 +20,11 @@ const ProductItem = (props) => {
 	return (
 		<Card className={classes.card}>
 			<div className={classes['product-wrapper']}>
-				<li>
-					<h2>{props.name}</h2>
-
-					<div className={classes.info}>
-						<span>{props.description}</span>
-						<span>{props.price}</span>
-						<label>Size</label>
-						<div className={classes.sizes}>
-							<button onClick={addProductToCartHandler}>{props.size[0]}</button>
-							<button>{props.size[1]}</button>
-							<button>{props.size[2]}</button>
-						</div>
-					</div>
+        <li className={classes['info-container']}>
+          <h2>{props.name}</h2>
+					<img src={props.image} />
+					<span>{props.price}</span>
+					<button className={classes.order}>Order</button>
 				</li>
 			</div>
 		</Card>
