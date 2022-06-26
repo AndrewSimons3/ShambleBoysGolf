@@ -24,6 +24,7 @@ const Cart = (props) => {
 						description={prod.description}
             price={prod.price}
             size={prod.size}
+            image={prod.image}
 					/>
 				);
 			})}

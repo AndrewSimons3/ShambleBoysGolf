@@ -13,7 +13,8 @@ const ProductItem = (props) => {
 			id: props.id,
 			name: props.name,
 			amount: 1,
-			price: price,
+      price: price,
+      image: props.image
 		});
 	};
 
@@ -24,7 +25,7 @@ const ProductItem = (props) => {
           <h3>{props.name}</h3>
 					<img src={props.image} alt="golf shirts"/>
 					<span>{props.price}</span>
-					<button className={classes.order} onAddToCart={addProductToCartHandler}>Order</button>
+					<button className={classes.order} onClick={addProductToCartHandler}>Order</button>
 				</li>
 			</div>
 		</Card>
