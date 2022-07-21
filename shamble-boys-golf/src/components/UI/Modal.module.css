@@ -4,14 +4,12 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-  
 	background-color: white;
-  
-
-
 	z-index: 30;
 	animation: slide-left 300ms ease-out forwards;
 }
+
+
 
 .backdrop {
 	position: fixed;
@@ -33,3 +31,4 @@
 		transform: translateX(0);
 	}
 }
+

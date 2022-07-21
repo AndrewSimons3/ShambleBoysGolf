@@ -14,10 +14,15 @@
 	font-weight: 900;
 }
 
+.empty {
+	text-align: center;
+}
+
 .exitBtn {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+	
 }
 
 .hr {

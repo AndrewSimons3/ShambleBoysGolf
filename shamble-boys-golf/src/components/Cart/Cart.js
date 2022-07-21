@@ -9,9 +9,17 @@ import CartProduct from './CartProduct';
 const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
 
+	
+	const hasItems = cartCtx.products.length > 0;
 	const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
-	const hasItems = cartCtx.products.length > 0;
+	const cartProductAddHandler = (product) => { 
+		cartCtx.addProduct({ ...product, amount: 1 })
+	}
+	
+	const cartProductRemoveHandler = (id) => {
+		cartCtx.removeProduct(id);
+	}
 
 	const cartProducts = (
 		<ul className={classes['cart-items']}>
@@ -24,7 +32,9 @@ const Cart = (props) => {
 						description={prod.description}
             price={prod.price}
             size={prod.size}
-            image={prod.image}
+						image={prod.image}
+						onAdd={cartProductAddHandler.bind(null, prod)}
+						onRemove={cartProductRemoveHandler.bind(null, prod.id)}
 					/>
 				);
 			})}
@@ -41,12 +51,13 @@ const Cart = (props) => {
 			</div>
 			<hr className={classes.hr} />
 			<div className={classes.inner}>{cartProducts}</div>
+			{!hasItems && <h2 className={classes.empty}>Your cart is empty!</h2>}
 			{hasItems && (
 				<div className={classes.footer}>
 					<hr className={classes['hr-2']} />
 					<div className={classes.subtotal}>
 						<p>Subtotal</p>
-						<span>{cartProducts.price}</span>
+						<span>{totalAmount}</span>
 					</div>
 					<p className={classes.info}>
 						Shipping, taxes, and discounts codes calculated at checkout.
